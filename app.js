@@ -53,7 +53,24 @@ app.use((req, res, next) => {
   next();
 });
 
+//Handle API request
+const handleRequest = async (api) => {
+  const [navigation, home, about] =
+    await Promise.all([
+      api.getSingle('navigation'),
+      api.getSingle('home'),
+      api.getSingle('about'),
+    ]);
 
+  console.log(about, home);
+
+  return {
+    assets,
+    home,
+    about,
+    navigation,
+  };
+};
 
 //=======================All the routes - these can have their own file/folder========================
 app.get('/', (req, res) => {
