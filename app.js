@@ -40,10 +40,20 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
+//Middleware to add prismic content
 app.use((req, res, next) => {
-  
-  next()
-})
+  res.locals.ctx = {
+    endpoint: process.env.PRISMIC_ENDPOINT,
+    linkResolver: handleLinkResolver,
+  };
+
+  res.locals.Prismic = Prismic;
+  res.locals.Link = handleLinkResolver;
+
+  next();
+});
+
+
 
 //=======================All the routes - these can have their own file/folder========================
 app.get('/', (req, res) => {
