@@ -8,6 +8,18 @@ const port = 3000
 const app = express()
 const path = require('path')
 
+const Prismic = require('@prismicio/client');
+
+//Initialize Prismic.io api
+const initApi = (req) => {
+  return Prismic.createClient(process.env.PRISMIC_ENDPOINT, {
+    accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+    req,
+    fetch,
+  });
+};
+
+
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
