@@ -19,6 +19,15 @@ const initApi = (req) => {
   });
 };
 
+//Link Resolver
+const handleLinkResolver = (doc) => {
+
+  if (doc.type === 'About') {
+    return '/about';
+  }
+
+  return '/';
+};
 
 app.use(logger('dev'))
 app.use(express.json())
