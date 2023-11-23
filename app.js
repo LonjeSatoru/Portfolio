@@ -37,8 +37,6 @@ app.use(errorHandler())
 app.use(express.static(path.join(__dirname, 'public')))
 
 
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'pug')
 
 //Middleware to add prismic content
 app.use((req, res, next) => {
@@ -65,17 +63,35 @@ const handleRequest = async (api) => {
   console.log(about, home);
 
   return {
-    assets,
     home,
     about,
     navigation,
   };
 };
 
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'pug')
+app.locals.basedir = app.get('views');
+('');
+
 //=======================All the routes - these can have their own file/folder========================
-app.get('/', (req, res) => {
-  res.render('pages/home')
-})
+app.get('/', async (req, res) => {
+  const api = await initApi(req);
+  const defaults = await handleRequest(api);
+
+  res.render('pages/home', {
+    ...defaults,
+  });
+});
+
+app.get('/about', async (req, res) => {
+  const api = await initApi(req);
+  const defaults = await handleRequest(api);
+
+  res.render('pages/about', {
+    ...defaults,
+  });
+});
 
 //=====================================Undefined routes error handling==================
 app.all('*', async (req, res, next) => {
