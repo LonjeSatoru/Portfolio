@@ -60,7 +60,7 @@ const handleRequest = async (api) => {
       api.getSingle('about'),
     ]);
 
-  console.log(about, home);
+  console.log(navigation.data.list);
 
   return {
     home,
