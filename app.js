@@ -60,7 +60,7 @@ const handleRequest = async (api) => {
       api.getSingle('about'),
     ]);
 
-  console.log(home.data);
+  console.log(home.data.introduction[0].image);
 
   return {
     home,
