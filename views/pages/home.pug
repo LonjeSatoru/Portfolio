@@ -4,6 +4,9 @@ block variables
     - var template = 'home'
 
 block content
-    .home(data-background="#c97164" data-color="#f9f1e7")
+    .home(data-background="#c97164" data-color="#000000")
         .home__wrapper
+            .home__introduction
+                .home__introduction__text=home.data.introduction
+
             
