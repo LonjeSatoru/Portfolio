@@ -22,7 +22,7 @@ const initApi = (req) => {
 //Link Resolver
 const handleLinkResolver = (doc) => {
 
-  if (doc.type === 'About') {
+  if (doc.type === 'about') {
     return '/about';
   }
 
@@ -60,7 +60,7 @@ const handleRequest = async (api) => {
       api.getSingle('about'),
     ]);
 
-  console.log(navigation.data.list);
+  console.log(home.data);
 
   return {
     home,
