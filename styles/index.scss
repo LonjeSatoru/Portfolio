@@ -1,4 +1,16 @@
+@import "./base/reset";
+
+@import './utils/variables';
+@import "./utils/mixins";
+
+@import './mixins/links';
+@import './mixins/titles';
+
+@import './base/fonts';
+
 @import "./shared/shared";
+
+@import "./layout/navigation";
 
 @import "./pages/home/home";
 @import "./pages/four04/four04";

@@ -1,0 +1,18 @@
+
+@font-face {
+    font-family: $font-neue-haas;
+    src: url('/styles/fonts/neuehaasdisplay-light.woff2') format('woff2'),
+        url('/styles/fonts/neuehaasdisplay-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-neue-haas;
+    src: url('/styles/fonts/neuehaasdisplay-mediu.woff2') format('woff2'),
+        url('/styles/fonts/neuehaas-mediu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

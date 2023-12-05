@@ -1,0 +1,21 @@
+.navigation{ 
+    @extend %cover;
+
+    border: 1px solid black;
+}
+.navigation__list{ 
+
+}
+.navigation__list__item{ 
+    pointer-events: auto;
+    position: absolute;
+    right: 4rem;
+    top: 4rem;
+}
+
+.navigation__list__link{
+    @extend %link--hidden;
+
+    display: block;
+    line-height: 1;
+}
