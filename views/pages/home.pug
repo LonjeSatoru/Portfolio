@@ -8,7 +8,20 @@ block content
         .home__wrapper
             .home__introduction
                 .home__introduction__text=home.data.introduction[0].text
-                .home__introduction__image=(src=home.data.introduction[0].image.url)
+                //- img.home__introduction__image(src=home.data.introduction[0].image.url)
+
+            .home__projects 
+                .home__projects__title=home.data.projects[0].title
+                
+            .home__about-me     
+                .home__about-me__title=home.data.about_me[0].title 
+                .home__about-me__description=home.data.about_me[0].description
+                //- img.home__about-me__image(src=home.data.about_me[0].image.url)
+
+                .home__about-me__technologies 
+                
+
+            
                 
 
             
