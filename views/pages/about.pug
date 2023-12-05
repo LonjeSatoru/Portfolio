@@ -4,5 +4,13 @@ block variables
     - var template = 'about'
 
 block content
-    .home
-        h1.home__about
+    .about(data-background="#c97164" data-color="#000000")
+        .about__wrapper
+            .about__introduction
+                .about__introduction__title=about.data.about_me[0].title
+                .about__introduction__description=about.data.about_me[0].description
+                img.about__introduction__image(src=about.data.about_me[0].image.url)
+
+            .about__contact
+                .about__contact__title=about.data.contact[0].title
+                .about__contact__text=about.data.contact[0].text
