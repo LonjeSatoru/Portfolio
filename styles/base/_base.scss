@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  @extend %cover;
+  font-size: calc(100vw / 1920px * 10px);
+
+  overflow: hidden;
+  position: fixed;
+
+}
+
+body {
+    @extend %cover;
+    
+  
+    font-family: $font-neue-haas;
+    position: fixed;
+  }
+  
+  a {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  button {
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  
+  img {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    vertical-align: middle;
+  
+    &.loaded {
+      opacity: 1;
+    }
+  }
+  
