@@ -14,7 +14,9 @@
 }
 
 .home__introduction__text{
+    @extend %title-69;
 
+    width: 77.3rem;
 
 }
 
@@ -24,6 +26,10 @@
 }
 
 .home__projects__title{
+    @extend %title-45;
+
+    height: 5.5rem;
+    border-bottom: 2px solid black
 
 
 }
@@ -34,13 +40,20 @@
 }
 
 .home__about-me__title{
+    @extend %title-45;
 
+    height: 5.5rem;
+    border-bottom: 2px solid black
 
 }
 
 .home__about-me__description{
-    @extend %title-55;
+    @extend %title-30;
 
+    width: 53.5rem;
+    height: 36.7rem;
+
+    
 }
 
 .home__about-me__technologies{
