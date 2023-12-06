@@ -1,6 +1,9 @@
 .navigation{ 
     @extend %cover;
 
+    pointer-events: none;
+    position: fixed;
+
     border: 1px solid black;
 }
 .navigation__list{ 
@@ -15,7 +18,9 @@
 
 .navigation__list__link{
     @extend %link--hidden;
-
+    @extend %title-24;
+    
     display: block;
     line-height: 1;
+
 }
