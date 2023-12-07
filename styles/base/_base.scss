@@ -9,8 +9,7 @@ html {
   @extend %cover;
   font-size: calc(100vw / 1920px * 10px);
 
-  overflow: hidden;
-  position: fixed;
+  overflow: visible;
 
 }
 
@@ -19,7 +18,7 @@ body {
     
   
     font-family: $font-neue-haas;
-    position: fixed;
+    overflow: auto;
   }
   
   a {
@@ -40,13 +39,13 @@ body {
     outline: none;
   }
   
-  img {
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    vertical-align: middle;
+//   img {
+//     opacity: 0;
+//     transition: opacity 0.4s ease;
+//     vertical-align: middle;
   
-    &.loaded {
-      opacity: 1;
-    }
-  }
+//     &.loaded {
+//       opacity: 1;
+//     }
+//   }
   
