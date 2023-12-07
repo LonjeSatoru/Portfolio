@@ -4,24 +4,37 @@
 }
 
 .home__wrapper{
-
-
+    margin-top: 4rem;
+    
 }
 
 .home__introduction{
+    display: flex;
+    border: 1px solid black;
+    margin: 2.6rem 10.6rem 0;
+    margin-bottom: 16.4rem;
 
 
+    .home__introduction__text{
+        @extend %title-69;
+    
+        width: 77.3rem;
+    
+    }
 }
 
-.home__introduction__text{
-    @extend %title-69;
 
-    width: 77.3rem;
 
+.home__introduction__image{
+    width: 60.6rem;
+    height: 56.4rem;
+    border: 1px solid black
 }
+
+
 
 .home__projects{
-
+    margin-bottom: 16.4rem;
 
 }
 
@@ -36,14 +49,15 @@
 
 .home__about-me{
 
-
+    margin-bottom: 16.4rem;
 }
 
 .home__about-me__title{
     @extend %title-45;
 
     height: 5.5rem;
-    border-bottom: 2px solid black
+    border-bottom: 2px solid black;
+    margin-bottom: 9.942rem;
 
 }
 
@@ -52,8 +66,9 @@
 
     width: 53.5rem;
     height: 36.7rem;
+    line-height: 1.37;
 
-    
+
 }
 
 .home__about-me__technologies{
